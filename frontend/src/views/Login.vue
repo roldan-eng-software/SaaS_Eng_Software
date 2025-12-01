@@ -29,12 +29,25 @@ export default {
   },
   methods: {
     async login() {
-      // Implementação básica de login (simulada ou real se tiver endpoint de token)
-      // Para este MVP, vamos apenas redirecionar baseando no usuário
-      if (this.username === 'admin') {
-        this.$router.push('/admin');
-      } else {
-        this.$router.push('/client');
+      try {
+        const response = await axios.post('http://localhost:8000/api/token/', {
+          username: this.username,
+          password: this.password
+        });
+        
+        const token = response.data.access;
+        localStorage.setItem('token', token);
+        
+        // Decode token to check if admin (optional, for now assume admin login goes to admin)
+        // Or just redirect based on username for simplicity if backend doesn't return role
+        if (this.username === 'admin') {
+          this.$router.push('/admin');
+        } else {
+          this.$router.push('/client');
+        }
+      } catch (err) {
+        this.error = 'Login falhou. Verifique suas credenciais.';
+        console.error(err);
       }
     }
   }
