@@ -1,419 +1,554 @@
 <!DOCTYPE html>
 <html class="dark" lang="pt-BR">
+
 <head>
-    <meta charset="utf-8"/>
-    <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+    <meta charset="utf-8" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
     <!-- [PERSONALIZÁVEL] Título da Página -->
     <title>Roldan Eng Software - Landing Page com Depoimentos</title>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-    <link href="https://fonts.googleapis.com" rel="preconnect"/>
-    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-    <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+    <link href="https://fonts.googleapis.com" rel="preconnect" />
+    <link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap"
+        rel="stylesheet" />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+        rel="stylesheet" />
     <script>
-      tailwind.config = {
-        darkMode: "class",
-        theme: {
-          extend: {
-            colors: {
-              "primary": "#0052CC",
-              "secondary": "#4A6FA5",
-              "accent": "#008B8B",
-              "background-light": "#F1F3F4",
-              "background-dark": "#101922",
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    colors: {
+                        "primary": "#0052CC",
+                        "secondary": "#4A6FA5",
+                        "accent": "#008B8B",
+                        "background-light": "#F1F3F4",
+                        "background-dark": "#101922",
+                    },
+                    fontFamily: {
+                        "display": ["Inter", "sans-serif"]
+                    },
+                    borderRadius: { "DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px" },
+                },
             },
-            fontFamily: {
-              "display": ["Inter", "sans-serif"]
-            },
-            borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
-          },
-        },
-      }
+        }
     </script>
     <style>
         .material-symbols-outlined {
             font-variation-settings:
-            'FILL' 0,
-            'wght' 400,
-            'GRAD' 0,
-            'opsz' 24
+                'FILL' 0,
+                'wght' 400,
+                'GRAD' 0,
+                'opsz' 24
         }
     </style>
 </head>
+
 <body class="bg-background-light dark:bg-background-dark font-display text-gray-800 dark:text-gray-200">
-<div class="relative flex min-h-screen w-full flex-col">
-    <header class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50">
-        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16">
-                <div class="flex items-center gap-3">
-                    <div class="size-9 flex-shrink-0">
-                        <!-- [PERSONALIZÁVEL] Logo da Empresa -->
-                        <img alt="Roldan Eng Software Logo" class="w-full h-full object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBASA2uTAaMDL1rFIr2EUnzbZQngUUvxTyECEKdd2eg-4l6_2swpppl3viO-G3uWRKkeVcYsOveviT3fv-umkB6lJsGk15_fLJ-C_MxZ8l8JN2AVHZwJQELbNnU5TaB-b0W1AeR4WkaYznmKhly4JcZjnyvlUkChOLAgz-PSmyGuWB7zRPJ4VNipZnar3qlAqKU21r95j3VvqNaxwRXa6_vG22NecKFLGzoLochNDQ3hbSvXO3-oKjjDq0qNMGVnFCaIhsuDYwMC0w"/>
-                    </div>
-                    <!-- [PERSONALIZÁVEL] Nome da Empresa no Header -->
-                    <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">Roldan Eng Software</h2>
-                </div>
-                <div class="flex flex-1 justify-end items-center gap-8">
-                    <nav class="hidden md:flex items-center gap-9">
-                        <!-- [PERSONALIZÁVEL] Links de Navegação -->
-                        <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Início</a>
-                        <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Sobre Nós</a>
-                        <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Serviços</a>
-                        <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Portfólio</a>
-                        <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors" href="#">Contato</a>
-                    </nav>
-                    <!-- [PERSONALIZÁVEL] Botão de CTA no Header -->
-                    <button class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-accent/90 transition-colors">
-                        <span class="truncate">Solicitar Orçamento</span>
-                    </button>
-                </div>
-            </div>
-        </div>
-    </header>
-    <main class="flex-grow">
-        <section class="py-20 md:py-32 bg-primary text-white">
+    <div class="relative flex min-h-screen w-full flex-col">
+        <header
+            class="sticky top-0 z-50 w-full bg-background-light/80 dark:bg-background-dark/80 backdrop-blur-sm border-b border-gray-200/50 dark:border-gray-800/50">
             <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
-                    <div class="flex flex-col gap-6 text-center md:text-left">
-                        <!-- [PERSONALIZÁVEL] Título Principal (Hero) -->
-                        <h1 class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter text-white">
-                            Roldan Eng Software
-                        </h1>
-                        <!-- [PERSONALIZÁVEL] Subtítulo (Hero) -->
-                        <p class="text-base sm:text-lg font-normal leading-normal text-gray-200 max-w-lg mx-auto md:mx-0">
-                            Transformando suas ideias em soluções digitais inovadoras para impulsionar o seu negócio.
-                        </p>
-                        <div class="mt-4">
-                            <!-- [PERSONALIZÁVEL] Botão Principal -->
-                            <button class="w-full sm:w-auto flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-accent/90 transition-colors mx-auto md:mx-0">
-                                <span class="truncate">Conheça Nossos Serviços</span>
-                            </button>
-                        </div>
-                    </div>
-                    <!-- [PERSONALIZÁVEL] Imagem Principal (Hero) -->
-                    <div class="w-full h-64 md:h-auto aspect-video rounded-xl bg-center bg-no-repeat bg-cover" data-alt="Abstract gradient of blue and purple shapes representing technology and innovation." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHIYC8KFHvOVBXWZZPNykvJBFstkMPGe_LqjGNazEOvS0vdTZB1B731mUN6bVS9hSihMIIG9cUlbs7995uXDiLeszXjH1XMO8SmM3_sIp5YXPXYbvaZ_tH1IVeGvxoK9KK09pF9tu4ge0fPt-ukoKjKMys37WNxxbpwVV8-fHBcPm3WHTVpbO8MDW5Ciyd3cYRZxTaDrokcVQLBZvB3i0YZL9yQqW08LuDAkSr8I7J898lWLcVoeYf4-XET95k4JX4eQ8BoI2ZRMQ");'></div>
-                </div>
-            </div>
-        </section>
-        <section class="py-16 bg-background-light dark:bg-background-dark/50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <!-- [PERSONALIZÁVEL] Título da Seção de Serviços -->
-                    <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">Nossas Soluções para o seu Negócio</h2>
-                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Oferecemos serviços completos para alavancar sua presença digital e otimizar sua gestão.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-                    <!-- [PERSONALIZÁVEL] Card de Serviço 1 -->
-                    <div class="flex flex-col gap-4 p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
-                        <span class="material-symbols-outlined text-secondary text-4xl">campaign</span>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Marketing Web</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm leading-normal">
-                                Desenvolvemos sites otimizados para SEO e criamos estratégias digitais que aumentam sua presença online e geram leads qualificados.
-                            </p>
-                            <a class="inline-flex items-center gap-1 text-sm font-semibold text-secondary mt-4 hover:underline" href="#">
-                                Saiba Mais
-                                <span class="material-symbols-outlined text-base">arrow_forward</span>
-                            </a>
-                        </div>
-                    </div>
-                    <!-- [PERSONALIZÁVEL] Card de Serviço 2 -->
-                    <div class="flex flex-col gap-4 p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
-                        <span class="material-symbols-outlined text-secondary text-4xl">monitoring</span>
-                        <div>
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Sistemas de Gestão Financeira</h3>
-                            <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm leading-normal">
-                                Construímos dashboards financeiros e sistemas ERP customizados para um controle preciso e tomada de decisões estratégicas para seu negócio.
-                            </p>
-                            <a class="inline-flex items-center gap-1 text-sm font-semibold text-secondary mt-4 hover:underline" href="#">
-                                Saiba Mais
-                                <span class="material-symbols-outlined text-base">arrow_forward</span>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-20 bg-secondary text-white">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-                    <div class="flex flex-col gap-8">
-                        <div>
-                            <!-- [PERSONALIZÁVEL] Sobre Nós -->
-                            <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Sobre a Roldan Eng Software</h2>
-                            <p class="mt-4 text-gray-200">Somos uma equipe apaixonada por tecnologia e inovação, dedicada a criar soluções de software que não apenas atendem, mas superam as expectativas de nossos clientes. Desde nossa fundação, temos o compromisso de transformar ideias complexas em sistemas intuitivos e eficientes.</p>
-                        </div>
-                        <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-                            <div class="flex flex-col gap-2 p-6 bg-background-light/10 rounded-xl border border-gray-200/20">
-                                <span class="material-symbols-outlined text-white text-3xl">rocket</span>
-                                <h3 class="font-bold text-lg text-white">Missão</h3>
-                                <p class="text-sm text-gray-300">Impulsionar o sucesso de nossos clientes através de soluções de software personalizadas, inovadoras e de alta qualidade.</p>
-                            </div>
-                            <div class="flex flex-col gap-2 p-6 bg-background-light/10 rounded-xl border border-gray-200/20">
-                                <span class="material-symbols-outlined text-white text-3xl">visibility</span>
-                                <h3 class="font-bold text-lg text-white">Visão</h3>
-                                <p class="text-sm text-gray-300">Ser referência no desenvolvimento de software, reconhecida pela excelência técnica e pelo impacto positivo nos negócios de nossos parceiros.</p>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="flex flex-col gap-8">
-                        <!-- [PERSONALIZÁVEL] Equipe -->
-                        <h3 class="text-2xl font-bold tracking-tight text-white">Nossa Equipe</h3>
-                        <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-center">
-                            <div class="flex flex-col items-center gap-3">
-                                <div class="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center" data-alt="Foto de perfil de um homem sorrindo, usando óculos e camisa social." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYcssKZhuXa22fuWvKmy6l3aM0DQ2VA0mhixLaBkbZY6T3Fko5dL8XGjevr-2ApY5fMG1rLmjqcwb3G80aqgSnS5scS1G55bn1Xu1kbUdjfF-LTnTpKqkRc6G5DdXNJVJrJyx7-p2y9-UuczIXezcTwWMTN42-3blnUqGbI3-2_-zrp6ZFeZtBUXzgvOQi0gEEOMT5Rr31hK2asoHisQLrOjdyO_reJJ20nV6VaJBLu4WyUJWeJ6bsYQngYxfNcvaPB_tdeB5deqw")'></div>
-                                <div>
-                                    <p class="font-bold text-white">Carlos Roldan</p>
-                                    <p class="text-sm text-gray-300">CEO &amp; Fundador</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col items-center gap-3">
-                                <div class="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center" data-alt="Foto de perfil de uma mulher com cabelos longos e escuros, sorrindo." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCGi0Ig_iX980I2brhL4XkVW1VxDMM30BzrKW2M_P2YoLdVqO_3Ajn7nxv2LisYEL39URhaJriztdb1X47Aix8btykgsUJjF2MKQ1SXDb0ild43rDvV0ljlQrzqB_3zuRV51yFJBSQpwiFfF7ZcPS0mnnJpOb8d3ep36aA3xf8lBQVynOIUrKfb6gVs425fja-tVitzRpl7cHHicKQlQXpwbLht-ivCqqJ558adLuZqL_rI1aBvwH_GIkgK8sQMw98jTtC7Vl936s")'></div>
-                                <div>
-                                    <p class="font-bold text-white">Ana Pereira</p>
-                                    <p class="text-sm text-gray-300">Gerente de Projetos</p>
-                                </div>
-                            </div>
-                            <div class="flex flex-col items-center gap-3">
-                                <div class="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center" data-alt="Foto de perfil de um homem com barba, olhando para a câmera." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7oIDkO4ujGrIlYeQZBVYoGHxjoNhTs_CQ1_sY4EtnUfbLdg7iqyLKNuROXU5MD4cxXRz1NTtRVxMncUkQkogCXbYLpy569Ed_T8TJeoQFzoq_91XmV1qP5096dgfKHSB2GG9SZ7fVVyzw8OprpMlIJ9AKQFLUqVUBmcoRLNgwzgHw8PUwf11dGRN0ze9Ip11GetbPutj5pGuq0WNemJzmc5i-F4yr5znYlNzoiJkRWstxISoojf3vlXk7_BSny1it3SpuJYHxtMs")'></div>
-                                <div>
-                                    <p class="font-bold text-white">Lucas Martins</p>
-                                    <p class="text-sm text-gray-300">Engenheiro de Software Sênior</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-20 bg-background-light dark:bg-background-dark/50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <!-- [PERSONALIZÁVEL] Título da Seção de Projetos -->
-                    <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">Projetos de Sucesso</h2>
-                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Confira alguns dos projetos que tivemos o prazer de desenvolver.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- [PERSONALIZÁVEL] Projeto 1 -->
-                    <div class="group overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800">
-                        <div class="aspect-video bg-gray-200 dark:bg-gray-800 bg-cover bg-center" data-alt="Screenshot of a financial management dashboard showing charts and graphs." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBp5gPlVRI8LMG2Q0ToGSLLYhvx15vmjffM7MlOjEpukQQAxu4hlDWf8oY7VeRYd2Fejl7KtdMrcld7dn84HyQS4ks4bmGNSKzlr-423KjtUzzpm_ru319TqU2B4dfa_ADM6JNre5hIVKN_0cUdo_6BBG3jEMt_sqIwbMCIBf5r0967U1deF34OqFl0ToZs2nnTMS7ORLepRY8SxuBwWjBZVwYLy_EwLTo5TykXCoVJmzpODfnsY9yZc4RiqtM3ivcPah2Gj6K6M8");'></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Sistema de Gestão Financeira</h3>
-                            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Dashboard completo para análise de métricas financeiras, com relatórios customizáveis e interface intuitiva.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">ERP</span>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Dashboard</span>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Finanças</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- [PERSONALIZÁVEL] Projeto 2 -->
-                    <div class="group overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800">
-                        <div class="aspect-video bg-gray-200 dark:bg-gray-800 bg-cover bg-center" data-alt="Homepage of a modern and clean marketing website for a tech company." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwhaKiYY6681EvCiGB2NuE8A55vsAUb_W08twdlKLKcoFQCtiWfKGV6q7cLmDDc303ruoqdKRiBH6aogi9NX5QW2txuSrVKjYtK52ki2T6vclkyzWfdnIr1uZcCpea_q0pISGPhsi38wbVABPmNBPXDJUayZFxG3dghCFSjU6PMGBSARAiwria4OcJFptehzWxNqRu1B1qmnesMgSW_vrPt9aIFFMf7o2vugDAL4DM0ooldvRiZJCRvScVaG-qUydNSnnhW0EmgTw");'></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Website Institucional &amp; SEO</h3>
-                            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Criação de um site responsivo e otimizado para motores de busca, aumentando a visibilidade e captação de clientes.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Web Design</span>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">SEO</span>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Marketing</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- [PERSONALIZÁVEL] Projeto 3 -->
-                    <div class="group overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800">
-                        <div class="aspect-video bg-gray-200 dark:bg-gray-800 bg-cover bg-center" data-alt="User interface of a custom e-commerce platform showing product listings." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlI7hFShyRETwmEZ2PmULd0Y1xSWQc9xzpePk2Offjv_0ubd8wzFe6naRtxJwPGZWxWL-Zn_jmaJ-BsN1lfjZPYFmzl2epO1VaSy-PDlaxqAZlTUy0xgnsO2pu2NhxzTwnn0d3CkWTaIm_3PMRr3IZnLHFUvhKqbaWRzm6z0pcHah3eXuWsvNCNt10Kx44SPO1-gkbenvmQ6Sj5k11RJMKuy3aU6K7Fxo3w0eb7tPON4fdovOLD8NLL7O_OkvDChTn31Q1e2Hr42M");'></div>
-                        <div class="p-6">
-                            <h3 class="text-xl font-bold text-gray-900 dark:text-white">Plataforma E-commerce</h3>
-                            <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Solução de e-commerce completa, com integração de pagamentos, gestão de estoque e design focado na conversão.</p>
-                            <div class="mt-4 flex flex-wrap gap-2">
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">E-commerce</span>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">UX/UI</span>
-                                <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Vendas</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-20">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <!-- [PERSONALIZÁVEL] Título da Seção de Depoimentos -->
-                    <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">O Que Nossos Clientes Dizem</h2>
-                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">A satisfação de nossos clientes é a nossa maior recompensa.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                    <!-- [PERSONALIZÁVEL] Depoimento 1 -->
-                    <div class="flex flex-col justify-between p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
-                        <div class="flex-grow">
-                            <div class="flex text-yellow-400 mb-4">
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400 italic">"A Roldan Eng Software transformou nosso sistema de gestão. A equipe é incrivelmente profissional e entregou um produto que superou todas as nossas expectativas."</p>
-                        </div>
-                        <div class="mt-6 flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center" data-alt="Foto de perfil de um homem de negócios sorrindo." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIYS-wf3dRTdZrKoVhdEsyJWG4lhNyWRcQc8eChY7d9__9kOocvl7O-TSqVzuNfaGv0NGT1ZMZiMWnL80s5o6-pk4bZKymuykb6BqZNbCZGa95_USObbnaHxCo2ZcdQmScvD-EjWzylqKQPWS24fZal7FhFcdLfK5AfUESGpvGr7aUhsGe_Pu3XEq6HwIh0wWds7_I0FBHlMVhl5HkPJf0wEXMKM7kPEMFmZ8uUWRniIVNzoV8Cnm0hLDM6PywrHnvIY-o28Fwwiw")'></div>
-                            <div>
-                                <p class="font-bold text-gray-900 dark:text-white">João Silva</p>
-                                <p class="text-sm text-gray-500 dark:text-gray-400">CEO, InovaTech</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- [PERSONALIZÁVEL] Depoimento 2 -->
-                    <div class="flex flex-col justify-between p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
-                        <div class="flex-grow">
-                            <div class="flex text-yellow-400 mb-4">
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400 italic">"O trabalho de marketing web e SEO foi impecável. Vimos um aumento significativo no tráfego orgânico e na geração de leads em poucos meses. Recomendo fortemente!"</p>
-                        </div>
-                        <div class="mt-6 flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center" data-alt="Foto de perfil de uma mulher com óculos, em um ambiente de escritório." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJKx30tp4nUkgLr-R3-DgDlG6yG_UxqwiKJXaMwo_YSZxiA84isyIYf0XJv9LiwqSc_Yjq9-TW64daOBfU748j773_BTDFi0XQL1rFeGlimC7EPQkMws7qPHmOA3GHFSP6pLQurvnJjDjCn21rb9rNf0rIG8xIwtyRYZPWUQO8jQt35tzCckn6yjrnSaWWIm9DfXlauwb9YrXMc7Mx2U0V7L7CDg0wgf83J7FhFxwK5Tt0aaKKvKTZeHKj7r2VXt7IcHYNPL3Xj3o")'></div>
-                            <div>
-                                <p class="font-bold text-gray-900 dark:text-white">Mariana Costa</p>
-                                <p class="text-sm text-gray-500 dark:text-gray-400">Diretora de Marketing, Soluções Criativas</p>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- [PERSONALIZÁVEL] Depoimento 3 -->
-                    <div class="flex flex-col justify-between p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
-                        <div class="flex-grow">
-                            <div class="flex text-yellow-400 mb-4">
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                                <span class="material-symbols-outlined !text-xl">star</span>
-                            </div>
-                            <p class="text-gray-600 dark:text-gray-400 italic">"Desde a concepção até o lançamento, o processo foi transparente e colaborativo. O sistema financeiro que eles desenvolveram otimizou nossas operações."</p>
-                        </div>
-                        <div class="mt-6 flex items-center gap-4">
-                            <div class="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center" data-alt="Foto de perfil de um homem com uma leve barba, sorrindo." style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMcLu-bnelZFNJyRrFhvefYmR3YFdJu8VHx5JNHln4KWlWeE8QA1rg0JN4Q5oyTwcy6tdk_ZJ-F1p6wnnodmg3FGhDOQYBwcqqMdJV8pq3rHf1HKqTchLnSfwh7VgJlKE-RYbg9aCiOLpiwlPWhkCZYDNKTowxkCmgVCAdT8U6b3pr1g2Ye2pT1UJzDv7YW6kBDqdoNpTXXNoWmpK4TsaMuBdpGcn_ZKl6JxTkOIQFewzwvbTrwuPePiTrbUoP0ln2CllqmXuFtWo")'></div>
-                            <div>
-                                <p class="font-bold text-gray-900 dark:text-white">Ricardo Almeida</p>
-                                <p class="text-sm text-gray-500 dark:text-gray-400">CFO, Gestão Eficiente</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-20 bg-background-light dark:bg-background-dark/50">
-            <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">Nosso Processo Simplificado</h2>
-                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Da ideia ao lançamento, seguimos um processo claro para garantir o sucesso do seu projeto.</p>
-                </div>
-                <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
-                    <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center size-12 rounded-full bg-secondary/20 text-secondary mb-4">
-                            <span class="material-symbols-outlined">lightbulb</span>
-                        </div>
-                        <h3 class="font-bold text-gray-900 dark:text-white">1. Descoberta</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Analisamos suas necessidades e definimos os objetivos.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center size-12 rounded-full bg-secondary/20 text-secondary mb-4">
-                            <span class="material-symbols-outlined">design_services</span>
-                        </div>
-                        <h3 class="font-bold text-gray-900 dark:text-white">2. Design</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Criamos a arquitetura e o design da interface do usuário.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center size-12 rounded-full bg-secondary/20 text-secondary mb-4">
-                            <span class="material-symbols-outlined">code</span>
-                        </div>
-                        <h3 class="font-bold text-gray-900 dark:text-white">3. Desenvolvimento</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Codificamos a solução com tecnologia de ponta.</p>
-                    </div>
-                    <div class="flex flex-col items-center">
-                        <div class="flex items-center justify-center size-12 rounded-full bg-secondary/20 text-secondary mb-4">
-                            <span class="material-symbols-outlined">rocket_launch</span>
-                        </div>
-                        <h3 class="font-bold text-gray-900 dark:text-white">4. Lançamento</h3>
-                        <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Implementamos o projeto e oferecemos suporte contínuo.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        <section class="py-16 bg-background-light dark:bg-background-dark">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center">
-                    <!-- [PERSONALIZÁVEL] Título da Seção de Contato -->
-                    <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">Vamos construir algo incrível juntos?</h2>
-                    <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Entre em contato para uma consulta gratuita e descubra como podemos ajudar seu negócio a crescer.</p>
-                </div>
-                <!-- [PERSONALIZÁVEL] Formulário de Contato -->
-                <form class="mt-12 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="nome">Nome</label>
-                        <div class="mt-1">
-                            <input autocomplete="given-name" class="block w-full rounded-md border-gray-300 dark:border-gray-700 shadow-sm focus:border-accent focus:ring-accent sm:text-sm bg-background-light dark:bg-gray-800" id="nome" name="nome" type="text"/>
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="empresa">Empresa</label>
-                        <div class="mt-1">
-                            <input autocomplete="organization" class="block w-full rounded-md border-gray-300 dark:border-gray-700 shadow-sm focus:border-accent focus:ring-accent sm:text-sm bg-background-light dark:bg-gray-800" id="empresa" name="empresa" type="text"/>
-                        </div>
-                    </div>
-                    <div class="sm:col-span-2">
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="email">Email</label>
-                        <div class="mt-1">
-                            <input autocomplete="email" class="block w-full rounded-md border-gray-300 dark:border-gray-700 shadow-sm focus:border-accent focus:ring-accent sm:text-sm bg-background-light dark:bg-gray-800" id="email" name="email" type="email"/>
-                        </div>
-                    </div>
-                    <div class="sm:col-span-2">
-                        <label class="block text-sm font-medium text-gray-700 dark:text-gray-300" for="mensagem">Mensagem</label>
-                        <div class="mt-1">
-                            <textarea class="block w-full rounded-md border-gray-300 dark:border-gray-700 shadow-sm focus:border-accent focus:ring-accent sm:text-sm bg-background-light dark:bg-gray-800" id="mensagem" name="mensagem" rows="4"></textarea>
-                        </div>
-                    </div>
-                    <div class="sm:col-span-2 text-center">
-                        <button class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-accent hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent" type="submit">
-                            Enviar Mensagem
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </section>
-    </main>
-    <footer class="bg-primary text-gray-200">
-        <div class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
-            <div class="xl:grid xl:grid-cols-3 xl:gap-8">
-                <div class="space-y-8 xl:col-span-1">
+                <div class="flex items-center justify-between h-16">
                     <div class="flex items-center gap-3">
                         <div class="size-9 flex-shrink-0">
-                            <!-- [PERSONALIZÁVEL] Logo no Footer -->
-                            <img alt="Roldan Eng Software Logo" class="w-full h-full object-contain filter brightness-0 invert" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRLKLykIpWRGWVqZ7UsSlQ77A3bFK-SLIjNpABMP075t86kFlyDBVDaYw7jU1M9ibEv1DCrv5c74jG_qIDsBe4jYQqPpwFou3ieWNDuVmpJiMPZao7Vu8oUNNQ8vckrPr_w5IvJIazAHnUKsmwJf_obg_rXi_N7BlilS_U4gsII4UIxchHq0kj2Bg1tMPNoEa-6ClxNphx-8YwHiM0l7rx7duErigWF6OVB6OwjRIzmX9symf11Krfy90SGEH4JP089ZAff1xD0c8"/>
+                            <!-- [PERSONALIZÁVEL] Logo da Empresa -->
+                            <img alt="Roldan Eng Software Logo" class="w-full h-full object-contain"
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuBASA2uTAaMDL1rFIr2EUnzbZQngUUvxTyECEKdd2eg-4l6_2swpppl3viO-G3uWRKkeVcYsOveviT3fv-umkB6lJsGk15_fLJ-C_MxZ8l8JN2AVHZwJQELbNnU5TaB-b0W1AeR4WkaYznmKhly4JcZjnyvlUkChOLAgz-PSmyGuWB7zRPJ4VNipZnar3qlAqKU21r95j3VvqNaxwRXa6_vG22NecKFLGzoLochNDQ3hbSvXO3-oKjjDq0qNMGVnFCaIhsuDYwMC0w" />
                         </div>
-                        <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-white">Roldan Eng Software</h2>
+                        <!-- [PERSONALIZÁVEL] Nome da Empresa no Header -->
+                        <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-gray-900 dark:text-white">
+                            Roldan Eng Software</h2>
                     </div>
-                    <p class="text-sm text-gray-300">Soluções de software personalizadas para impulsionar o crescimento do seu negócio.</p>
-                    <div class="flex space-x-6">
-                        <!-- [PERSONALIZÁVEL] Links de Redes Sociais -->
-                        <a class="text-gray-300 hover:text-white" href="#">
-                            <span class="sr-only">Facebook</span>
-                            <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24"><path clip-rule="evenodd" d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z" fill-rule="evenodd"></path></svg>
-                        </a>
+                    <div class="flex flex-1 justify-end items-center gap-8">
+                        <nav class="hidden md:flex items-center gap-9">
+                            <!-- [PERSONALIZÁVEL] Links de Navegação -->
+                            <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="#">Início</a>
+                            <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="#">Sobre Nós</a>
+                            <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="#">Serviços</a>
+                            <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="#">Portfólio</a>
+                            <a class="text-sm font-medium leading-normal text-gray-600 dark:text-gray-300 hover:text-primary dark:hover:text-primary transition-colors"
+                                href="#">Contato</a>
+                        </nav>
+                        <!-- [PERSONALIZÁVEL] Botão de CTA no Header -->
+                        <button
+                            class="hidden sm:flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-accent text-white text-sm font-bold leading-normal tracking-[0.015em] hover:bg-accent/90 transition-colors">
+                            <span class="truncate">Solicitar Orçamento</span>
+                        </button>
                     </div>
-                </div>
-                <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
-                    <!-- [PERSONALIZÁVEL] Copyright -->
-                    <p class="text-sm text-gray-300 md:order-1">© 2024 Roldan Eng Software. Todos os direitos reservados.</p>
                 </div>
             </div>
-        </div>
-    </footer>
-</div>
+        </header>
+        <main class="flex-grow">
+            <section class="py-20 md:py-32 bg-primary text-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid md:grid-cols-2 gap-10 lg:gap-16 items-center">
+                        <div class="flex flex-col gap-6 text-center md:text-left">
+                            <!-- [PERSONALIZÁVEL] Título Principal (Hero) -->
+                            <h1
+                                class="text-4xl sm:text-5xl md:text-6xl font-black leading-tight tracking-tighter text-white">
+                                Roldan Eng Software
+                            </h1>
+                            <!-- [PERSONALIZÁVEL] Subtítulo (Hero) -->
+                            <p
+                                class="text-base sm:text-lg font-normal leading-normal text-gray-200 max-w-lg mx-auto md:mx-0">
+                                Transformando suas ideias em soluções digitais inovadoras para impulsionar o seu
+                                negócio.
+                            </p>
+                            <div class="mt-4">
+                                <!-- [PERSONALIZÁVEL] Botão Principal -->
+                                <button
+                                    class="w-full sm:w-auto flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-12 px-5 bg-accent text-white text-base font-bold leading-normal tracking-[0.015em] hover:bg-accent/90 transition-colors mx-auto md:mx-0">
+                                    <span class="truncate">Conheça Nossos Serviços</span>
+                                </button>
+                            </div>
+                        </div>
+                        <!-- [PERSONALIZÁVEL] Imagem Principal (Hero) -->
+                        <div class="w-full h-64 md:h-auto aspect-video rounded-xl bg-center bg-no-repeat bg-cover"
+                            data-alt="Abstract gradient of blue and purple shapes representing technology and innovation."
+                            style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCHIYC8KFHvOVBXWZZPNykvJBFstkMPGe_LqjGNazEOvS0vdTZB1B731mUN6bVS9hSihMIIG9cUlbs7995uXDiLeszXjH1XMO8SmM3_sIp5YXPXYbvaZ_tH1IVeGvxoK9KK09pF9tu4ge0fPt-ukoKjKMys37WNxxbpwVV8-fHBcPm3WHTVpbO8MDW5Ciyd3cYRZxTaDrokcVQLBZvB3i0YZL9yQqW08LuDAkSr8I7J898lWLcVoeYf4-XET95k4JX4eQ8BoI2ZRMQ");'>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 bg-background-light dark:bg-background-dark/50">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <!-- [PERSONALIZÁVEL] Título da Seção de Serviços -->
+                        <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">Nossas
+                            Soluções para o seu Negócio</h2>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Oferecemos serviços completos para
+                            alavancar sua presença digital e otimizar sua gestão.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        <!-- [PERSONALIZÁVEL] Card de Serviço 1 -->
+                        <div
+                            class="flex flex-col gap-4 p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
+                            <span class="material-symbols-outlined text-secondary text-4xl">campaign</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Marketing Web</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm leading-normal">
+                                    Desenvolvemos sites otimizados para SEO e criamos estratégias digitais que aumentam
+                                    sua presença online e geram leads qualificados.
+                                </p>
+                                <a class="inline-flex items-center gap-1 text-sm font-semibold text-secondary mt-4 hover:underline"
+                                    href="#">
+                                    Saiba Mais
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                        <!-- [PERSONALIZÁVEL] Card de Serviço 2 -->
+                        <div
+                            class="flex flex-col gap-4 p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
+                            <span class="material-symbols-outlined text-secondary text-4xl">monitoring</span>
+                            <div>
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Sistemas de Gestão
+                                    Financeira</h3>
+                                <p class="text-gray-600 dark:text-gray-400 mt-2 text-sm leading-normal">
+                                    Construímos dashboards financeiros e sistemas ERP customizados para um controle
+                                    preciso e tomada de decisões estratégicas para seu negócio.
+                                </p>
+                                <a class="inline-flex items-center gap-1 text-sm font-semibold text-secondary mt-4 hover:underline"
+                                    href="#">
+                                    Saiba Mais
+                                    <span class="material-symbols-outlined text-base">arrow_forward</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 bg-secondary text-white">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
+                        <div class="flex flex-col gap-8">
+                            <div>
+                                <!-- [PERSONALIZÁVEL] Sobre Nós -->
+                                <h2 class="text-3xl font-bold tracking-tight text-white sm:text-4xl">Sobre a Roldan Eng
+                                    Software</h2>
+                                <p class="mt-4 text-gray-200">Somos uma equipe apaixonada por tecnologia e inovação,
+                                    dedicada a criar soluções de software que não apenas atendem, mas superam as
+                                    expectativas de nossos clientes. Desde nossa fundação, temos o compromisso de
+                                    transformar ideias complexas em sistemas intuitivos e eficientes.</p>
+                            </div>
+                            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                                <div
+                                    class="flex flex-col gap-2 p-6 bg-background-light/10 rounded-xl border border-gray-200/20">
+                                    <span class="material-symbols-outlined text-white text-3xl">rocket</span>
+                                    <h3 class="font-bold text-lg text-white">Missão</h3>
+                                    <p class="text-sm text-gray-300">Impulsionar o sucesso de nossos clientes através de
+                                        soluções de software personalizadas, inovadoras e de alta qualidade.</p>
+                                </div>
+                                <div
+                                    class="flex flex-col gap-2 p-6 bg-background-light/10 rounded-xl border border-gray-200/20">
+                                    <span class="material-symbols-outlined text-white text-3xl">visibility</span>
+                                    <h3 class="font-bold text-lg text-white">Visão</h3>
+                                    <p class="text-sm text-gray-300">Ser referência no desenvolvimento de software,
+                                        reconhecida pela excelência técnica e pelo impacto positivo nos negócios de
+                                        nossos parceiros.</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="flex flex-col gap-8">
+                            <!-- [PERSONALIZÁVEL] Equipe -->
+                            <h3 class="text-2xl font-bold tracking-tight text-white">Nossa Equipe</h3>
+                            <div class="grid grid-cols-2 sm:grid-cols-3 gap-6 text-center">
+                                <div class="flex flex-col items-center gap-3">
+                                    <div class="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center"
+                                        data-alt="Foto de perfil de um homem sorrindo, usando óculos e camisa social."
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCYcssKZhuXa22fuWvKmy6l3aM0DQ2VA0mhixLaBkbZY6T3Fko5dL8XGjevr-2ApY5fMG1rLmjqcwb3G80aqgSnS5scS1G55bn1Xu1kbUdjfF-LTnTpKqkRc6G5DdXNJVJrJyx7-p2y9-UuczIXezcTwWMTN42-3blnUqGbI3-2_-zrp6ZFeZtBUXzgvOQi0gEEOMT5Rr31hK2asoHisQLrOjdyO_reJJ20nV6VaJBLu4WyUJWeJ6bsYQngYxfNcvaPB_tdeB5deqw")'>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-white">Carlos Roldan</p>
+                                        <p class="text-sm text-gray-300">CEO &amp; Fundador</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center gap-3">
+                                    <div class="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center"
+                                        data-alt="Foto de perfil de uma mulher com cabelos longos e escuros, sorrindo."
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCCGi0Ig_iX980I2brhL4XkVW1VxDMM30BzrKW2M_P2YoLdVqO_3Ajn7nxv2LisYEL39URhaJriztdb1X47Aix8btykgsUJjF2MKQ1SXDb0ild43rDvV0ljlQrzqB_3zuRV51yFJBSQpwiFfF7ZcPS0mnnJpOb8d3ep36aA3xf8lBQVynOIUrKfb6gVs425fja-tVitzRpl7cHHicKQlQXpwbLht-ivCqqJ558adLuZqL_rI1aBvwH_GIkgK8sQMw98jTtC7Vl936s")'>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-white">Ana Pereira</p>
+                                        <p class="text-sm text-gray-300">Gerente de Projetos</p>
+                                    </div>
+                                </div>
+                                <div class="flex flex-col items-center gap-3">
+                                    <div class="w-24 h-24 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center"
+                                        data-alt="Foto de perfil de um homem com barba, olhando para a câmera."
+                                        style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuA7oIDkO4ujGrIlYeQZBVYoGHxjoNhTs_CQ1_sY4EtnUfbLdg7iqyLKNuROXU5MD4cxXRz1NTtRVxMncUkQkogCXbYLpy569Ed_T8TJeoQFzoq_91XmV1qP5096dgfKHSB2GG9SZ7fVVyzw8OprpMlIJ9AKQFLUqVUBmcoRLNgwzgHw8PUwf11dGRN0ze9Ip11GetbPutj5pGuq0WNemJzmc5i-F4yr5znYlNzoiJkRWstxISoojf3vlXk7_BSny1it3SpuJYHxtMs")'>
+                                    </div>
+                                    <div>
+                                        <p class="font-bold text-white">Lucas Martins</p>
+                                        <p class="text-sm text-gray-300">Engenheiro de Software Sênior</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 bg-background-light dark:bg-background-dark/50">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <!-- [PERSONALIZÁVEL] Título da Seção de Projetos -->
+                        <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">
+                            Projetos de Sucesso</h2>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Confira alguns dos projetos que tivemos
+                            o prazer de desenvolver.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- [PERSONALIZÁVEL] Projeto 1 -->
+                        <div
+                            class="group overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800">
+                            <div class="aspect-video bg-gray-200 dark:bg-gray-800 bg-cover bg-center"
+                                data-alt="Screenshot of a financial management dashboard showing charts and graphs."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBBp5gPlVRI8LMG2Q0ToGSLLYhvx15vmjffM7MlOjEpukQQAxu4hlDWf8oY7VeRYd2Fejl7KtdMrcld7dn84HyQS4ks4bmGNSKzlr-423KjtUzzpm_ru319TqU2B4dfa_ADM6JNre5hIVKN_0cUdo_6BBG3jEMt_sqIwbMCIBf5r0967U1deF34OqFl0ToZs2nnTMS7ORLepRY8SxuBwWjBZVwYLy_EwLTo5TykXCoVJmzpODfnsY9yZc4RiqtM3ivcPah2Gj6K6M8");'>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Sistema de Gestão Financeira
+                                </h3>
+                                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Dashboard completo para análise
+                                    de métricas financeiras, com relatórios customizáveis e interface intuitiva.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">ERP</span>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Dashboard</span>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Finanças</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [PERSONALIZÁVEL] Projeto 2 -->
+                        <div
+                            class="group overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800">
+                            <div class="aspect-video bg-gray-200 dark:bg-gray-800 bg-cover bg-center"
+                                data-alt="Homepage of a modern and clean marketing website for a tech company."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCwhaKiYY6681EvCiGB2NuE8A55vsAUb_W08twdlKLKcoFQCtiWfKGV6q7cLmDDc303ruoqdKRiBH6aogi9NX5QW2txuSrVKjYtK52ki2T6vclkyzWfdnIr1uZcCpea_q0pISGPhsi38wbVABPmNBPXDJUayZFxG3dghCFSjU6PMGBSARAiwria4OcJFptehzWxNqRu1B1qmnesMgSW_vrPt9aIFFMf7o2vugDAL4DM0ooldvRiZJCRvScVaG-qUydNSnnhW0EmgTw");'>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Website Institucional &amp;
+                                    SEO</h3>
+                                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Criação de um site responsivo e
+                                    otimizado para motores de busca, aumentando a visibilidade e captação de clientes.
+                                </p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Web
+                                        Design</span>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">SEO</span>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Marketing</span>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [PERSONALIZÁVEL] Projeto 3 -->
+                        <div
+                            class="group overflow-hidden rounded-xl bg-white dark:bg-gray-900/50 border border-gray-200 dark:border-gray-800">
+                            <div class="aspect-video bg-gray-200 dark:bg-gray-800 bg-cover bg-center"
+                                data-alt="User interface of a custom e-commerce platform showing product listings."
+                                style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuDlI7hFShyRETwmEZ2PmULd0Y1xSWQc9xzpePk2Offjv_0ubd8wzFe6naRtxJwPGZWxWL-Zn_jmaJ-BsN1lfjZPYFmzl2epO1VaSy-PDlaxqAZlTUy0xgnsO2pu2NhxzTwnn0d3CkWTaIm_3PMRr3IZnLHFUvhKqbaWRzm6z0pcHah3eXuWsvNCNt10Kx44SPO1-gkbenvmQ6Sj5k11RJMKuy3aU6K7Fxo3w0eb7tPON4fdovOLD8NLL7O_OkvDChTn31Q1e2Hr42M");'>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="text-xl font-bold text-gray-900 dark:text-white">Plataforma E-commerce</h3>
+                                <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">Solução de e-commerce completa,
+                                    com integração de pagamentos, gestão de estoque e design focado na conversão.</p>
+                                <div class="mt-4 flex flex-wrap gap-2">
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">E-commerce</span>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">UX/UI</span>
+                                    <span
+                                        class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-secondary/10 text-secondary">Vendas</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <!-- [PERSONALIZÁVEL] Título da Seção de Depoimentos -->
+                        <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">O Que
+                            Nossos Clientes Dizem</h2>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">A satisfação de nossos clientes é a
+                            nossa maior recompensa.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                        <!-- [PERSONALIZÁVEL] Depoimento 1 -->
+                        <div
+                            class="flex flex-col justify-between p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
+                            <div class="flex-grow">
+                                <div class="flex text-yellow-400 mb-4">
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 italic">"A Roldan Eng Software transformou
+                                    nosso sistema de gestão. A equipe é incrivelmente profissional e entregou um produto
+                                    que superou todas as nossas expectativas."</p>
+                            </div>
+                            <div class="mt-6 flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center"
+                                    data-alt="Foto de perfil de um homem de negócios sorrindo."
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCIYS-wf3dRTdZrKoVhdEsyJWG4lhNyWRcQc8eChY7d9__9kOocvl7O-TSqVzuNfaGv0NGT1ZMZiMWnL80s5o6-pk4bZKymuykb6BqZNbCZGa95_USObbnaHxCo2ZcdQmScvD-EjWzylqKQPWS24fZal7FhFcdLfK5AfUESGpvGr7aUhsGe_Pu3XEq6HwIh0wWds7_I0FBHlMVhl5HkPJf0wEXMKM7kPEMFmZ8uUWRniIVNzoV8Cnm0hLDM6PywrHnvIY-o28Fwwiw")'>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-900 dark:text-white">João Silva</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">CEO, InovaTech</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [PERSONALIZÁVEL] Depoimento 2 -->
+                        <div
+                            class="flex flex-col justify-between p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
+                            <div class="flex-grow">
+                                <div class="flex text-yellow-400 mb-4">
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 italic">"O trabalho de marketing web e SEO
+                                    foi impecável. Vimos um aumento significativo no tráfego orgânico e na geração de
+                                    leads em poucos meses. Recomendo fortemente!"</p>
+                            </div>
+                            <div class="mt-6 flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center"
+                                    data-alt="Foto de perfil de uma mulher com óculos, em um ambiente de escritório."
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBJKx30tp4nUkgLr-R3-DgDlG6yG_UxqwiKJXaMwo_YSZxiA84isyIYf0XJv9LiwqSc_Yjq9-TW64daOBfU748j773_BTDFi0XQL1rFeGlimC7EPQkMws7qPHmOA3GHFSP6pLQurvnJjDjCn21rb9rNf0rIG8xIwtyRYZPWUQO8jQt35tzCckn6yjrnSaWWIm9DfXlauwb9YrXMc7Mx2U0V7L7CDg0wgf83J7FhFxwK5Tt0aaKKvKTZeHKj7r2VXt7IcHYNPL3Xj3o")'>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-900 dark:text-white">Mariana Costa</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">Diretora de Marketing, Soluções
+                                        Criativas</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- [PERSONALIZÁVEL] Depoimento 3 -->
+                        <div
+                            class="flex flex-col justify-between p-6 bg-white dark:bg-gray-900/50 rounded-xl border border-gray-200 dark:border-gray-800">
+                            <div class="flex-grow">
+                                <div class="flex text-yellow-400 mb-4">
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                    <span class="material-symbols-outlined !text-xl">star</span>
+                                </div>
+                                <p class="text-gray-600 dark:text-gray-400 italic">"Desde a concepção até o lançamento,
+                                    o processo foi transparente e colaborativo. O sistema financeiro que eles
+                                    desenvolveram otimizou nossas operações."</p>
+                            </div>
+                            <div class="mt-6 flex items-center gap-4">
+                                <div class="w-12 h-12 rounded-full bg-gray-200 dark:bg-gray-800 bg-cover bg-center"
+                                    data-alt="Foto de perfil de um homem com uma leve barba, sorrindo."
+                                    style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBMcLu-bnelZFNJyRrFhvefYmR3YFdJu8VHx5JNHln4KWlWeE8QA1rg0JN4Q5oyTwcy6tdk_ZJ-F1p6wnnodmg3FGhDOQYBwcqqMdJV8pq3rHf1HKqTchLnSfwh7VgJlKE-RYbg9aCiOLpiwlPWhkCZYDNKTowxkCmgVCAdT8U6b3pr1g2Ye2pT1UJzDv7YW6kBDqdoNpTXXNoWmpK4TsaMuBdpGcn_ZKl6JxTkOIQFewzwvbTrwuPePiTrbUoP0ln2CllqmXuFtWo")'>
+                                </div>
+                                <div>
+                                    <p class="font-bold text-gray-900 dark:text-white">Ricardo Almeida</p>
+                                    <p class="text-sm text-gray-500 dark:text-gray-400">CFO, Gestão Eficiente</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-20 bg-background-light dark:bg-background-dark/50">
+                <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center mb-12">
+                        <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">Nosso
+                            Processo Simplificado</h2>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Da ideia ao lançamento, seguimos um
+                            processo claro para garantir o sucesso do seu projeto.</p>
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="flex items-center justify-center size-12 rounded-full bg-secondary/20 text-secondary mb-4">
+                                <span class="material-symbols-outlined">lightbulb</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 dark:text-white">1. Descoberta</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Analisamos suas necessidades e
+                                definimos os objetivos.</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="flex items-center justify-center size-12 rounded-full bg-secondary/20 text-secondary mb-4">
+                                <span class="material-symbols-outlined">design_services</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 dark:text-white">2. Design</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Criamos a arquitetura e o design da
+                                interface do usuário.</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="flex items-center justify-center size-12 rounded-full bg-secondary/20 text-secondary mb-4">
+                                <span class="material-symbols-outlined">code</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 dark:text-white">3. Desenvolvimento</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Codificamos a solução com
+                                tecnologia de ponta.</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div
+                                class="flex items-center justify-center size-12 rounded-full bg-secondary/20 text-secondary mb-4">
+                                <span class="material-symbols-outlined">rocket_launch</span>
+                            </div>
+                            <h3 class="font-bold text-gray-900 dark:text-white">4. Lançamento</h3>
+                            <p class="text-sm text-gray-600 dark:text-gray-400 mt-1">Implementamos o projeto e
+                                oferecemos suporte contínuo.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section class="py-16 bg-background-light dark:bg-background-dark">
+                <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+                    <div class="text-center">
+                        <!-- [PERSONALIZÁVEL] Título da Seção de Contato -->
+                        <h2 class="text-3xl font-bold leading-tight tracking-tight text-gray-900 dark:text-white">Vamos
+                            construir algo incrível juntos?</h2>
+                        <p class="mt-4 text-lg text-gray-600 dark:text-gray-400">Entre em contato para uma consulta
+                            gratuita e descubra como podemos ajudar seu negócio a crescer.</p>
+                    </div>
+                    <!-- [PERSONALIZÁVEL] Formulário de Contato -->
+                    <form class="mt-12 grid grid-cols-1 gap-y-6 sm:grid-cols-2 sm:gap-x-8">
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                for="nome">Nome</label>
+                            <div class="mt-1">
+                                <input autocomplete="given-name"
+                                    class="block w-full rounded-md border-gray-300 dark:border-gray-700 shadow-sm focus:border-accent focus:ring-accent sm:text-sm bg-background-light dark:bg-gray-800"
+                                    id="nome" name="nome" type="text" />
+                            </div>
+                        </div>
+                        <div>
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                for="empresa">Empresa</label>
+                            <div class="mt-1">
+                                <input autocomplete="organization"
+                                    class="block w-full rounded-md border-gray-300 dark:border-gray-700 shadow-sm focus:border-accent focus:ring-accent sm:text-sm bg-background-light dark:bg-gray-800"
+                                    id="empresa" name="empresa" type="text" />
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                for="email">Email</label>
+                            <div class="mt-1">
+                                <input autocomplete="email"
+                                    class="block w-full rounded-md border-gray-300 dark:border-gray-700 shadow-sm focus:border-accent focus:ring-accent sm:text-sm bg-background-light dark:bg-gray-800"
+                                    id="email" name="email" type="email" />
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2">
+                            <label class="block text-sm font-medium text-gray-700 dark:text-gray-300"
+                                for="mensagem">Mensagem</label>
+                            <div class="mt-1">
+                                <textarea
+                                    class="block w-full rounded-md border-gray-300 dark:border-gray-700 shadow-sm focus:border-accent focus:ring-accent sm:text-sm bg-background-light dark:bg-gray-800"
+                                    id="mensagem" name="mensagem" rows="4"></textarea>
+                            </div>
+                        </div>
+                        <div class="sm:col-span-2 text-center">
+                            <button
+                                class="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-lg shadow-sm text-white bg-accent hover:bg-accent/90 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-accent"
+                                type="submit">
+                                Enviar Mensagem
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <footer class="bg-primary text-gray-200">
+            <div class="max-w-6xl mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                <div class="xl:grid xl:grid-cols-3 xl:gap-8">
+                    <div class="space-y-8 xl:col-span-1">
+                        <div class="flex items-center gap-3">
+                            <div class="size-9 flex-shrink-0">
+                                <!-- [PERSONALIZÁVEL] Logo no Footer -->
+                                <img alt="Roldan Eng Software Logo"
+                                    class="w-full h-full object-contain filter brightness-0 invert"
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuDRLKLykIpWRGWVqZ7UsSlQ77A3bFK-SLIjNpABMP075t86kFlyDBVDaYw7jU1M9ibEv1DCrv5c74jG_qIDsBe4jYQqPpwFou3ieWNDuVmpJiMPZao7Vu8oUNNQ8vckrPr_w5IvJIazAHnUKsmwJf_obg_rXi_N7BlilS_U4gsII4UIxchHq0kj2Bg1tMPNoEa-6ClxNphx-8YwHiM0l7rx7duErigWF6OVB6OwjRIzmX9symf11Krfy90SGEH4JP089ZAff1xD0c8" />
+                            </div>
+                            <h2 class="text-lg font-bold leading-tight tracking-[-0.015em] text-white">Roldan Eng
+                                Software</h2>
+                        </div>
+                        <p class="text-sm text-gray-300">Soluções de software personalizadas para impulsionar o
+                            crescimento do seu negócio.</p>
+                        <div class="flex space-x-6">
+                            <!-- [PERSONALIZÁVEL] Links de Redes Sociais -->
+                            <a class="text-gray-300 hover:text-white" href="#">
+                                <span class="sr-only">Facebook</span>
+                                <svg aria-hidden="true" class="h-6 w-6" fill="currentColor" viewBox="0 0 24 24">
+                                    <path clip-rule="evenodd"
+                                        d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"
+                                        fill-rule="evenodd"></path>
+                                </svg>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="mt-8 border-t border-gray-700 pt-8 md:flex md:items-center md:justify-between">
+                        <!-- [PERSONALIZÁVEL] Copyright -->
+                        <p class="text-sm text-gray-300 md:order-1">© 2025 Roldan Eng. Software. Todos os direitos
+                            reservados.</p>
+                    </div>
+                </div>
+            </div>
+        </footer>
+    </div>
 </body>
+
 </html>
